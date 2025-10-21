@@ -159,7 +159,12 @@ const Index = () => {
             title="Vitórias"
             value={`${model1Wins} vs ${model2Wins}`}
             icon={TrendingUp}
-            description="Comparativo"
+            comparison={{
+              model1Name: data.model1Name,
+              model1Value: model1Wins,
+              model2Name: data.model2Name,
+              model2Value: model2Wins,
+            }}
           />
         </section>
 
