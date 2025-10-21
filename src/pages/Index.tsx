@@ -35,20 +35,6 @@ const Index = () => {
       model2Name: "sabiazinho_3",
       evaluationTypes: [
         {
-          type: "evaluated_area",
-          label: "Área Avaliada",
-          categories: [
-            { category: "all", model1Score: 79.6, model2Score: 79.6 },
-            { category: "administrativo", model1Score: 75.2, model2Score: 73.8 },
-            { category: "civil", model1Score: 88.5, model2Score: 86.2 },
-            { category: "constitucional", model1Score: 75.2, model2Score: 75.2 },
-            { category: "empresarial", model1Score: 75.2, model2Score: 75.2 },
-            { category: "penal", model1Score: 75.2, model2Score: 75.2 },
-            { category: "tributário", model1Score: 75.2, model2Score: 75.2 },
-            { category: "trabalhista", model1Score: 75.2, model2Score: 75.2 },
-          ],
-        },
-        {
           type: "multiple_choice",
           label: "Múltipla Escolha",
           categories: [
@@ -64,7 +50,7 @@ const Index = () => {
         },
         {
           type: "legal_document_identification",
-          label: "Identificação de Documentos Legais",
+          label: "Identificação de Documentos",
           categories: [
             { category: "all", model1Score: 76.8, model2Score: 77.2 },
             { category: "administrativo", model1Score: 72.3, model2Score: 71.8 },
@@ -78,7 +64,7 @@ const Index = () => {
         },
         {
           type: "legal_document_writing",
-          label: "Redação de Documentos Legais",
+          label: "Redação de Documentos",
           categories: [
             { category: "all", model1Score: 68.5, model2Score: 70.2 },
             { category: "administrativo", model1Score: 65.2, model2Score: 67.8 },
@@ -180,7 +166,7 @@ const Index = () => {
         {/* Evaluation Types Tabs */}
         <section>
           <Tabs defaultValue={data.evaluationTypes[0].type} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
               {data.evaluationTypes.map((evalType) => (
                 <TabsTrigger key={evalType.type} value={evalType.type} className="text-xs md:text-sm">
                   {evalType.label}
